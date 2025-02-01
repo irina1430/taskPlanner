@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="assets/style.css" />
+    <title>Задачи</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="add-task">
+        <h2>Добавить задачу</h2>
+        <div class="add-task__div">
+          <input
+            id="taskInput"
+            class="add-task__div-input"
+            type="text"
+            placeholder="Введите задачу"
+          />
+          <button type="button" class="add-btn btn" id="addBtn">
+            Добавить задачу
+          </button>
+        </div>
+      </div>
+      <div class="task-wrapper">
+        <h2>Список задач</h2>
+        <p class="no-task" id="noTask">Нет задач</p>
+        <ul class="task-list" id="task-list"></ul>
+        <button type="button" class="remove-btn" id="deleteBtn">
+          Очистить список задач
+        </button>
+      </div>
+    </div>
+    <script src="assets/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,121 @@
+body {
+  background: radial-gradient(
+    circle,
+    rgba(131, 58, 180, 1) 29%,
+    rgba(195, 29, 122, 1) 91%
+  );
+}
+.container {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: white;
+  width: 60vw;
+  margin: 50px auto;
+  border-radius: 20px;
+}
+.btn {
+  background-color: #cb1090;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+h2 {
+  color: blueviolet;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 50px;
+  padding-top: 30px;
+}
+.add-task__div {
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+.add-task__div-input {
+  width: 70%;
+  border-color: #cb1090;
+  border-radius: 20px;
+  padding-left: 20px;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5px rgba(161, 70, 149, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 15px rgba(65, 5, 68, 0.8);
+  }
+  100% {
+    box-shadow: 0 0 5px rgba(172, 76, 143, 0.5);
+  }
+}
+
+input:focus {
+  border-color: #851262;
+  animation: glow 1s infinite alternate;
+}
+.task-list {
+  list-style: none;
+  width: 80%;
+  padding-left: 20px;
+  max-width: 750px;
+  position: relative;
+}
+.task-wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.no-task {
+  font-size: 24px;
+  color: gray;
+  font-style: italic;
+}
+.hidden {
+  display: none;
+}
+.task-item {
+  border: 2px solid #851262;
+  border-radius: 20px;
+  padding: 15px;
+  margin-bottom: 25px;
+  position: relative;
+  cursor: pointer;
+}
+.task-item::after {
+  content: "";
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-image: url(./img/checked.svg);
+  background-size: cover;
+  background-position: center;
+  right: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.checked::after {
+  background-image: url(./img/checkbox-line.svg) !important;
+}
+.checked {
+  text-decoration: line-through;
+}
+.remove-btn {
+  margin: 50px;
+  align-self: flex-end;
+  background-color: #cb1090;
+  border: none;
+  color: white;
+  padding: 10px 20px;
+  text-align: center;
+  font-size: 16px;
+  border-radius: 20px;
+  cursor: pointer;
+}
+.remove-btn:disabled {
+  pointer-events: none;
+  opacity: 0.5;
+}
